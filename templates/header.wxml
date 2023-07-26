@@ -1,0 +1,15 @@
+<!--/*
+ * 
+ * 雅趣·慢享小程序
+ *
+ */-->
+
+<template name="tempHeader">
+  <view class="header">
+    <image src="../../images/logo.png" style="height:200rpx;width:400rpx"></image>
+    <view style='margin-top:40rpx'>
+      {小镇故事 - 分享·快乐·生活，不仅仅是娱乐！}
+    </view>
+  </view>
+</template>
+<!-- header end -->

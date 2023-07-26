@@ -1,0 +1,66 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"useMultiFrameRuntime": true,
+		"useApiHook": true,
+		"useApiHostProcess": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enableEngineNative": false,
+		"useIsolateContext": true,
+		"userConfirmedBundleSwitch": false,
+		"packNpmManually": false,
+		"packNpmRelationList": [],
+		"minifyWXSS": true,
+		"showES6CompileOption": false,
+		"condition": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.19.0",
+	"appid": "wx258a159fb9b03ff4",
+	"projectname": "%E5%B0%8F%E9%95%87%E6%95%85%E4%BA%8BLife%E5%BC%80(%E6%BA%90%E7%89%88)",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "test",
+					"pathName": "COMPONENT/music",
+					"query": "a=哈哈",
+					"scene": 1044,
+					"shareInfo": {},
+					"referrerInfo": {}
+				}
+			]
+		}
+	},
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"editorSetting": {
+		"tabIndent": "tab",
+		"tabSize": 2
+	}
+}

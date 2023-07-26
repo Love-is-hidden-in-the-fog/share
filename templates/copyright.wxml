@@ -1,0 +1,4 @@
+<template name="tempCopyright">
+	<!-- 底部内容 -->
+<view>   雅趣·慢享小程序      </view>
+</template>

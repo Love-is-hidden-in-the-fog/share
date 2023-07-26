@@ -1,0 +1,34 @@
+<!--templates/login.wxml-->
+
+<template name="login">
+    <block wx:if="{{!userInfo.isLogin}}">
+        <!-- <button class="login-btn" open-type="getUserInfo" bindtap="agreeGetUser">
+            <view class="login-inner">
+                <image class="avatar" src="../../images/gravatar.png"></image>
+                <view class="username">
+                    <text>请点击登录</text>
+                </view>
+            </view>
+				</button> -->
+				<form class="login-inner" bindsubmit="getUserName"> <!--定义提交事件-->
+					<button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+						<image class="avatar" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../images/gravatar.png'}}"></image>
+					</button> 
+					<view class="cu-form-group">
+								<view class="title">昵称：</view>
+								<input placeholder="请输入昵称" type="nickname" name="nickname" maxlength="32"></input>
+					</view>
+					<view class="up-bt">
+								<button form-type="submit" role="button" aria-disabled="false" class="save-bt cu-btn block bg-blue margin-tb-sm lg">登录</button>
+					</view>
+				</form>
+    </block>
+    <block wx:else>
+        <view class="login-inner">
+            <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+            <view class="username">
+                <text>{{userInfo.nickName}}</text>
+            </view>
+        </view>
+    </block>
+</template>
