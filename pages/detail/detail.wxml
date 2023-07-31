@@ -155,7 +155,7 @@
     <view class="menuBackground" catchtap="hiddenMenubox" style="display:{{menuBackgroup ? 'block' : 'none'}}"></view>
     <view style="display:{{display}}">
       <view class="comment-fixed">
-        <form catchsubmit="formSubmit" report-submit="true">
+        <form catchsubmit="formSubmit1" report-submit="true">
           <view class="comment-respond">
             <input class="comment-input" maxlength="200" name="inputPostID" value="{{detail.id}}" style="display:none" />
             <input class="comment-input" maxlength="200" name="inputPostTitle" value="{{detail.title.rendered}}" style="display:none" />

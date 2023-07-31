@@ -21,6 +21,7 @@ import {
   ModalView
 } from '../../templates/modal-view/modal-view.js'
 import Poster from '../../templates/components/wxa-plugin-canvas-poster/poster/poster';
+let  userinfo={}
 Page({
   data: {
     title: '文章内容',
@@ -601,7 +602,13 @@ Page({
       })
     }
   },
-  //提交评论
+	//提交评论
+	formSubmit1(){
+		wx.showToast({
+			title: '该功能正在更新',
+			icon:"error"
+		})
+	},
   formSubmit: function(e) {
     var self = this;
     var comment = e.detail.value.inputComment;
@@ -750,12 +757,34 @@ Page({
           })
       } else {
         Auth.checkSession(self, 'isLoginNow');
-
       }
 
     }
 
-  },
+	},
+	onChooseAvatar:function(e){
+		// console.log(e)
+		
+		userinfo.avatarUrl=e.detail.avatarUrl
+		this.setData({
+			userInfo:userinfo
+		})
+    // Auth.checkAgreeGetUser(e,app,self,'0');        
+	}, 
+	getUserName(e){
+		let self= this;
+		userinfo.nickName=e.detail.value.nickname
+		if(userinfo.nickName&&userinfo.avatarUrl){
+			userinfo.isLogin = true;
+			Auth.checkAgreeGetUser(e,userinfo,self,'0');  
+		}else{
+			console.log("请输入完整")
+			wx.showToast({
+				title: '请输入完整数据',
+				icon:"error"
+			})
+		}
+	},
   agreeGetUser: function(e) {
     let self = this;
     Auth.checkAgreeGetUser(e, app, self, '0');;
