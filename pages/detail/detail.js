@@ -207,7 +207,8 @@ Page({
     var self = this;
     if (id == 'likebottom') {
       this.ShowHideMenu();
-    }
+		}
+		console.log(self.data.openid)
     if (self.data.openid) {
       var data = {
         openid: self.data.openid,
@@ -283,24 +284,10 @@ Page({
     })
   },
   praise: function() {
-    this.ShowHideMenu();
-    var self = this;
-    var minAppType = config.getMinAppType;
-    var system = self.data.system;
-    if (minAppType == "0" && system == 'Android') {
-      if (self.data.openid) {
-        wx.navigateTo({
-          url: '../pay/pay?flag=1&openid=' + self.data.openid + '&postid=' + self.data.postID
-        })
-      } else {
-        Auth.checkSession(self, 'isLoginNow');
-      }
-    } else {
-      var src = config.getZanImageUrl;
-      wx.previewImage({
-        urls: [src],
-      });
-    }
+		wx.showToast({
+			title: '该功能已停用',
+			icon:'error'
+		})
   },
   //获取是否开启评论设置
   getEnableComment: function(id) {

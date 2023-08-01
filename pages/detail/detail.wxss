@@ -648,3 +648,18 @@
   border: 1rpx #49AF00 solid;
 }
 
+/* 清除button样式 */
+.avatar-wrapper{
+	width: 600rpx;
+	height: 100rpx;
+	/* padding: 10rpx; */
+}
+.avatar-wrapper::after{
+	border: 0;
+}
+
+.cu-form-group{
+	display: flex;
+	text-align: center;
+	padding: 20rpx 0;
+}

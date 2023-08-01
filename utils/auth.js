@@ -61,12 +61,12 @@ Auth.checkAgreeGetUser = function (e, userinfo, appPage, authFlag) {
 			userLevel.levelName = "订阅者";
 			// console.log(userinfo)
 			wx.setStorageSync('userInfo', userinfo)
-			wx.setStorageSync('openid', null);
+			wx.setStorageSync('openid', "openid");
 			wx.setStorageSync('userLevel', userLevel);
 			appPage.setData({
 				userInfo:userinfo,
 				isLoginPopup:false,
-				openid:null,
+				openid:"openid",
 				userLevel:userLevel
 			})
     } else {
